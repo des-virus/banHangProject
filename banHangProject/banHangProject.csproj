@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{640DB909-2533-4ADD-867F-FA70740CC932}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>banHangProject</RootNamespace>
+    <AssemblyName>banHangProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Connector.cs" />
+    <Compile Include="csdlDataSet.cs">
+      <DependentUpon>csdlDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="csdlDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>csdlDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BillIn.cs" />
+    <Compile Include="Model\BillInDetail.cs" />
+    <Compile Include="Model\BillOut.cs" />
+    <Compile Include="Model\BillOutDetail.cs" />
+    <Compile Include="Model\ComboBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Division.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Guess.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\Label.cs" />
+    <Compile Include="Model\Producer.cs" />
+    <Compile Include="Model\Provider.cs" />
+    <Compile Include="Model\Type.cs" />
+    <Compile Include="Model\Unit.cs" />
+    <Compile Include="View\AdminManager\Division\frmAddDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\Division\frmAddDivision.Designer.cs">
+      <DependentUpon>frmAddDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManager\Division\frmDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\Division\frmDivision.Designer.cs">
+      <DependentUpon>frmDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManager\Division\frmEditDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\Division\frmEditDivision.Designer.cs">
+      <DependentUpon>frmEditDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePass.Designer.cs">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AdminManager\Employee\frmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\Employee\frmAddEmployee.Designer.cs">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManager\Employee\frmEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\Employee\frmEditEmployee.Designer.cs">
+      <DependentUpon>frmEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManager\Employee\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\Employee\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManager\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManager\Report\BaoCao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManager\Report\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\Report\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManager\Report\frmReportList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminManager\Report\frmReportList.Designer.cs">
+      <DependentUpon>frmReportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Guess\frmAddGuess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SaleManager\Guess\frmAddGuess.Designer.cs">
+      <DependentUpon>frmAddGuess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Guess\frmEditGuess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SaleManager\Guess\frmEditGuess.Designer.cs">
+      <DependentUpon>frmEditGuess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Guess\frmGuess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SaleManager\Guess\frmGuess.Designer.cs">
+      <DependentUpon>frmGuess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmInputNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmInputNumber.Designer.cs">
+      <DependentUpon>frmInputNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmBillOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmBillOut.Designer.cs">
+      <DependentUpon>frmBillOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmSale.Designer.cs">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmTabControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\frmTabControl.Designer.cs">
+      <DependentUpon>frmTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaleManager\Sale\MakeToString.cs" />
+    <Compile Include="View\WareManager\Good\frmBillIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmBillIn.Designer.cs">
+      <DependentUpon>frmBillIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmGood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmGood.Designer.cs">
+      <DependentUpon>frmGood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmInput.Designer.cs">
+      <DependentUpon>frmInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmTabControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Good\frmTabControl.Designer.cs">
+      <DependentUpon>frmTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Item\frmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Item\frmAddItem.Designer.cs">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Item\frmEditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Item\frmEditItem.Designer.cs">
+      <DependentUpon>frmEditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Item\frmItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Item\frmItem.Designer.cs">
+      <DependentUpon>frmItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Label\frmAddLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Label\frmAddLabel.Designer.cs">
+      <DependentUpon>frmAddLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Label\frmEditLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Label\frmEditLabel.Designer.cs">
+      <DependentUpon>frmEditLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Label\frmLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Label\frmLabel.Designer.cs">
+      <DependentUpon>frmLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Producer\frmAddProducer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Producer\frmAddProducer.Designer.cs">
+      <DependentUpon>frmAddProducer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Producer\frmEditProducer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Producer\frmEditProducer.Designer.cs">
+      <DependentUpon>frmEditProducer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Producer\frmProducer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Producer\frmProducer.Designer.cs">
+      <DependentUpon>frmProducer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Provider\frmAddProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Provider\frmAddProvider.Designer.cs">
+      <DependentUpon>frmAddProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Provider\frmEditProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Provider\frmEditProvider.Designer.cs">
+      <DependentUpon>frmEditProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Provider\frmProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Provider\frmProvider.Designer.cs">
+      <DependentUpon>frmProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Type\frmAddType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Type\frmAddType.Designer.cs">
+      <DependentUpon>frmAddType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Type\frmEditType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Type\frmEditType.Designer.cs">
+      <DependentUpon>frmEditType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Type\frmType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Type\frmType.Designer.cs">
+      <DependentUpon>frmType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Unit\frmAddUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Unit\frmAddUnit.Designer.cs">
+      <DependentUpon>frmAddUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Unit\frmEditUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Unit\frmEditUnit.Designer.cs">
+      <DependentUpon>frmEditUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WareManager\Unit\frmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WareManager\Unit\frmUnit.Designer.cs">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="View\AdminManager\Division\frmAddDivision.resx">
+      <DependentUpon>frmAddDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\Division\frmDivision.resx">
+      <DependentUpon>frmDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\Division\frmEditDivision.resx">
+      <DependentUpon>frmEditDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\Employee\frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\Employee\frmEditEmployee.resx">
+      <DependentUpon>frmEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\Employee\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\Report\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\Report\frmReportList.resx">
+      <DependentUpon>frmReportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminManager\Report\Report2.rdlc" />
+    <EmbeddedResource Include="View\SaleManager\Guess\frmAddGuess.resx">
+      <DependentUpon>frmAddGuess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SaleManager\Guess\frmEditGuess.resx">
+      <DependentUpon>frmEditGuess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SaleManager\Guess\frmGuess.resx">
+      <DependentUpon>frmGuess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SaleManager\Sale\frmBillOut.resx">
+      <DependentUpon>frmBillOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SaleManager\Sale\frmInputNumber.resx">
+      <DependentUpon>frmInputNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SaleManager\Sale\frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SaleManager\Sale\frmSale.resx">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SaleManager\Sale\frmTabControl.resx">
+      <DependentUpon>frmTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Good\frmBillIn.resx">
+      <DependentUpon>frmBillIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Good\frmGood.resx">
+      <DependentUpon>frmGood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Good\frmInput.resx">
+      <DependentUpon>frmInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Good\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Good\frmTabControl.resx">
+      <DependentUpon>frmTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Label\frmAddLabel.resx">
+      <DependentUpon>frmAddLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Label\frmEditLabel.resx">
+      <DependentUpon>frmEditLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Label\frmLabel.resx">
+      <DependentUpon>frmLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Producer\frmAddProducer.resx">
+      <DependentUpon>frmAddProducer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Producer\frmEditProducer.resx">
+      <DependentUpon>frmEditProducer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Producer\frmProducer.resx">
+      <DependentUpon>frmProducer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Provider\frmAddProvider.resx">
+      <DependentUpon>frmAddProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Provider\frmEditProvider.resx">
+      <DependentUpon>frmEditProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Provider\frmProvider.resx">
+      <DependentUpon>frmProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Type\frmAddType.resx">
+      <DependentUpon>frmAddType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Type\frmEditType.resx">
+      <DependentUpon>frmEditType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Type\frmType.resx">
+      <DependentUpon>frmType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Unit\frmAddUnit.resx">
+      <DependentUpon>frmAddUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Unit\frmEditUnit.resx">
+      <DependentUpon>frmEditUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WareManager\Unit\frmUnit.resx">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="csdlDataSet.xsc">
+      <DependentUpon>csdlDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="csdlDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>csdlDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="csdlDataSet.xss">
+      <DependentUpon>csdlDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="View\AdminManager\Report\BaoCao.xsc">
+      <DependentUpon>BaoCao.xsd</DependentUpon>
+    </None>
+    <None Include="View\AdminManager\Report\BaoCao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaoCao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\AdminManager\Report\BaoCao.xss">
+      <DependentUpon>BaoCao.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_plus_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service_manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-custome.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
